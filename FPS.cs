@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Inheritance_brant_isaiah
 {
-    internal class FPS
+    class FPS : Game
     {
+
+        public FPS(string esrbParam, string titleParam) : base(esrbParam, titleParam)
+        {
+            Title = titleParam;
+            Esrb = esrbParam;
+        }
+
+        public override string Describe()
+        {
+            return $"{Title} is a fps game rate {Esrb}!";
+        }
     }
 }
